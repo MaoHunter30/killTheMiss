@@ -96,7 +96,7 @@ function selecionarAleatoria() {
       }
       
       estado.valores.inimigos.push(numeroAleatorio);
-      setTimeout(() => temporizarTiroInimigo(numeroAleatorio), 2000);
+      setTimeout(() => temporizarTiroInimigo(numeroAleatorio), 1000);
     }
   }
 }
@@ -208,8 +208,8 @@ function iniciar() {
   estado.vista.predio.style.display = "block";
   estado.acoes.iniciado = true;
 
-  (estado.acoes.gerarInimigos = setInterval(selecionarAleatoria, 2100)),
-    (estado.acoes.tempo = setInterval(temporizador, 1000)),
+  (estado.acoes.gerarInimigos = setInterval(selecionarAleatoria, 1100)),
+    (estado.acoes.tempo = setInterval(temporizador, 500)),
     atirarNaJanela();
     var candidateGroup = document.getElementsByName("radioGroup");
     var candidateChecked = Array.from(candidateGroup).find(
@@ -231,8 +231,8 @@ function reiniciar() {
   estado.acoes.iniciado = true;
 
   estado.vista.telaFinal.style.display = "none";
-  (estado.acoes.gerarInimigos = setInterval(selecionarAleatoria, 2100)),
-    (estado.acoes.tempo = setInterval(temporizador, 1000)),
+  (estado.acoes.gerarInimigos = setInterval(selecionarAleatoria, 1100)),
+    (estado.acoes.tempo = setInterval(temporizador, 500)),
     atirarNaJanela();
 }
 
