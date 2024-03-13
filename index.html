@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoot the miss</title>
+    <link rel="icon" href="src/images/fev.png" type="image/png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./src/styles/reset.css" />
+    <link rel="stylesheet" href="./src/styles/main.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="menu-opcao">
+          <h2 style="color: #f67b18; font-family: Tahoma, Verdana, Geneva, sans-serif;">Temps(s)</h2>
+          <h2 style="font-family: Tahoma, Verdana, Geneva, sans-serif;" id="tempoRestante">60</h2>
+        </div>
+        <div class="menu-opcao">
+          <h2 style="color: #f67b18; font-family: Tahoma, Verdana, Geneva, sans-serif;">Points</h2>
+          <h2 style="font-family: Tahoma, Verdana, Geneva, sans-serif;" id="pontos">000</h2>
+        </div>
+        <div class="menu-opcao">
+          <h2 style="color: #f67b18; font-family: Tahoma, Verdana, Geneva, sans-serif;">Vies</h2>
+          <h2 style="font-family: Tahoma, Verdana, Geneva, sans-serif;" id="vidas">3</h2>
+        </div>
+      </header>
+
+      <div id="tela-sangue">TEST</div>
+
+      <div id="tela-inicio">
+        <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+          <img src="./src/images/logo.png" alt="logo" style="height: auto; width: 70%; max-width: 100%;"/>
+        </div>
+        <div class="radio-toolbar">
+          <h2 style="font-family: Tahoma, Verdana, Geneva, sans-serif; color: aliceblue; margin-bottom: 0.5em;">Choisis tes adversaires:</h2>
+          <input type="radio" id="radioFavori" name="radioGroup" value=1 checked>
+          <label style="font-family: Tahoma, Verdana, Geneva, sans-serif;" for="radioFavori">Les favorites</label>
+          <input type="radio" id="radioOutsider" name="radioGroup" value=2>
+          <label style="font-family: Tahoma, Verdana, Geneva, sans-serif;" for="radioOutsider">Les Outsiders</label>
+          <input type="radio" id="radioCosplay" name="radioGroup" value=3>
+          <label style="font-family: Tahoma, Verdana, Geneva, sans-serif;" for="radioCosplay">Les Cosplayeuses</label>
+        </div>
+        <div style="flex: 1; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+          <button style="font-family: Tahoma, Verdana, Geneva, sans-serif;" id="button-iniciar" onclick="iniciar()">Start</button>
+          <h2 id="texto-pontuacao" style="font-family: Tahoma, Verdana, Geneva, sans-serif;">Ton Meilleur Score: <span style="font-family: Tahoma, Verdana, Geneva, sans-serif; color: #f67b18;" id="recorde">0</span></h3>
+        </div>
+      </div>
+
+      <div id="predio">
+        <div class="linha-janela">
+          <div id="0" class="janela"></div>
+          <div id="1" class="janela"></div>
+          <div id="2" class="janela"></div>
+        </div>
+        <div class="linha-janela">
+          <div id="3" class="janela"></div>
+          <div id="4" class="janela"></div>
+          <div id="5" class="janela"></div>
+        </div>
+        <div class="linha-janela">
+          <div id="6" class="janela"></div>
+          <div id="7" class="janela"></div>
+          <div id="8" class="janela"></div>
+        </div>
+        <div class="linha-janela">
+          <div id="9" class="janela"></div>
+          <div id="10" class="janela"></div>
+          <div id="11" class="janela"></div>
+        </div>
+      </div>
+
+      <div id="tela-fim">
+        <h2 style="font-family: Tahoma, Verdana, Geneva, sans-serif;" class="texto-fim">Statistiques</h2>
+        <h2 style="font-family: Tahoma, Verdana, Geneva, sans-serif;" class="texto-fim">Points: <span style="font-family: Tahoma, Verdana, Geneva, sans-serif;" id="pontuacao">0</span></h2>
+        <h2 style="font-family: Tahoma, Verdana, Geneva, sans-serif;" class="texto-fim">Meilleur Score: <span style="font-family: Tahoma, Verdana, Geneva, sans-serif;" id="recorde2">0</span></h2>
+        <button id="button-reiniciar" class="texto-fim" onclick="reiniciar()">Restart</button>
+      </div>
+    </main>
+
+    <script defer src="./src/scripts/motor.js"></script>
+  </body>
+</html>
